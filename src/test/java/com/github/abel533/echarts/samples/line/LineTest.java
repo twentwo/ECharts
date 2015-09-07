@@ -29,6 +29,7 @@ import com.github.abel533.echarts.axis.ValueAxis;
 import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.data.LineData;
+import com.github.abel533.echarts.json.GsonUtil;
 import com.github.abel533.echarts.series.Line;
 import com.github.abel533.echarts.util.EnhancedOption;
 import org.junit.Test;
@@ -76,7 +77,7 @@ public class LineTest {
         //line.itemStyle.normal.areaStyle = new AreaStyle();
         line.addData(120, 132, 301, 134,new LineData(90,Symbol.droplet,5),230,210);
         option.series.add(line);*/
-
+        System.out.println(GsonUtil.prettyFormat(option));
         option.exportToHtml("line.html");
         option.view();
     }
